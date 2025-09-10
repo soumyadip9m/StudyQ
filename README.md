@@ -254,4 +254,4 @@ For support and questions:
 
 ---
 
-**Built with ❤️ for educational institutions worldwide**#
+**Built with ❤️ for learners **#
