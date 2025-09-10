@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, Shield, Mail, Database, AlertTriangle } from 'lucide-react';
+import { Save, Shield, Mail, Database, AlertTriangle, MessageCircle } from 'lucide-react';
 
 import { notificationService } from '../../services/notificationService';
 
