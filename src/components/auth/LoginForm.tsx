@@ -130,26 +130,36 @@ const LoginForm: React.FC = () => {
           </form>
 
 
-          {/* Demo Credentials */}
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <p className="text-xs text-gray-500 mb-3">Demo credentials:</p>
-            <div className="space-y-2 text-xs text-gray-600">
-              <div className="flex justify-between">
-                <span className="font-medium">Admin:</span>
-                <span>admin / admin123</span>
-              </div>
-              <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded">
-                <p className="font-medium text-yellow-800">For newly created users:</p>
-                <p className="text-yellow-700">Use the temporary password provided when the user was created.</p>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
+          
+         {/* Demo Credentials */}
+<div className="mt-8 pt-6 border-t border-gray-200">
+  <p className="text-xs text-gray-500 mb-3">Demo credentials:</p>
+  <div className="space-y-2 text-xs text-gray-600">
+    
+    <div className="flex justify-between">
+      <span className="font-medium">Admin:</span>
+      <span>admin / admin123</span>
     </div>
-  );
-};
+
+    <div className="flex justify-between">
+      <span className="font-medium">Teacher:</span>
+      <span>prof.smith / teacher123</span>
+    </div>
+
+    <div className="flex justify-between">
+      <span className="font-medium">Student:</span>
+      <span>john.doe / student123</span>
+    </div>
+
+    <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded">
+      <p className="font-medium text-yellow-800">For newly created users:</p>
+      <p className="text-yellow-700">
+        Use the temporary password provided when the user was created.
+      </p>
+    </div>
+  </div>
+</div>
+
 
 
 export default LoginForm;
