@@ -256,7 +256,10 @@ For support and questions:
 
 ---
 
-**Built with ❤️ for educational institutions worldwide**#   n e w  
- #   S t u d y Q  
- #   S t u d y Q  
+**Built with ❤️ for educational institutions worldwide**#   n e w 
+ 
+ #   S t u d y Q 
+ 
+ #   S t u d y Q 
+ 
  
