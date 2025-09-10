@@ -1,4 +1,4 @@
-# Smart Study Material Platform
+# Smart Study Material Platform,STUDYQ
 
 A comprehensive, production-ready educational content management and delivery system built with React, TypeScript, and modern web technologies.
 
