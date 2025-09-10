@@ -3,7 +3,6 @@ import { Eye, EyeOff, BookOpen, Loader2 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { LoginCredentials } from '../../types';
 
-
 const LoginForm: React.FC = () => {
   const { login, isLoading } = useAuth();
   const [credentials, setCredentials] = useState<LoginCredentials>({
@@ -13,31 +12,27 @@ const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
 
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-
-
     if (!credentials.username.trim() || !credentials.password.trim()) {
       setError('Please enter both username and password');
       return;
     }
-
-
     const result = await login(credentials);
     if (!result.success) {
       setError(result.error || 'Login failed');
     }
   };
 
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setCredentials(prev => ({ ...prev, [name]: value }));
+    setCredentials(prev => ({
+      ...prev,
+      [name]: value
+    }));
     setError(''); // Clear error when user starts typing
   };
-
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 px-4 sm:px-6 lg:px-8">
@@ -53,7 +48,6 @@ const LoginForm: React.FC = () => {
           <p className="mt-2 text-sm text-gray-600">StudyQ - Smart Study Material Platform</p>
         </div>
 
-
         {/* Login Form */}
         <div className="bg-white rounded-xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -62,7 +56,6 @@ const LoginForm: React.FC = () => {
                 {error}
               </div>
             )}
-
 
             <div>
               <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
@@ -80,7 +73,6 @@ const LoginForm: React.FC = () => {
                 disabled={isLoading}
               />
             </div>
-
 
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
@@ -112,7 +104,6 @@ const LoginForm: React.FC = () => {
               </div>
             </div>
 
-
             <button
               type="submit"
               disabled={isLoading}
@@ -120,8 +111,7 @@ const LoginForm: React.FC = () => {
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                  Signing in...
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" /> Signing in...
                 </>
               ) : (
                 'Sign in'
@@ -129,37 +119,24 @@ const LoginForm: React.FC = () => {
             </button>
           </form>
 
-
-          
-         {/* Demo Credentials */}
-<div className="mt-8 pt-6 border-t border-gray-200">
-  <p className="text-xs text-gray-500 mb-3">Demo credentials:</p>
-  <div className="space-y-2 text-xs text-gray-600">
-    
-    <div className="flex justify-between">
-      <span className="font-medium">Admin:</span>
-      <span>admin / admin123</span>
+          {/* Demo Credentials */}
+          <div className="mt-8 pt-6 border-t border-gray-200">
+            <p className="text-xs text-gray-500 mb-3">Demo credentials:</p>
+            <div className="space-y-2 text-xs text-gray-600">
+              <div className="flex justify-between">
+                <span className="font-medium">Admin:</span>
+                <span>admin / admin123</span>
+              </div>
+              <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded">
+                <p className="font-medium text-yellow-800">For newly created users:</p>
+                <p className="text-yellow-700">Use the temporary password provided when the user was created.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div className="flex justify-between">
-      <span className="font-medium">Teacher:</span>
-      <span>prof.smith / teacher123</span>
-    </div>
-
-    <div className="flex justify-between">
-      <span className="font-medium">Student:</span>
-      <span>john.doe / student123</span>
-    </div>
-
-    <div className="mt-2 p-2 bg-yellow-50 border border-yellow-200 rounded">
-      <p className="font-medium text-yellow-800">For newly created users:</p>
-      <p className="text-yellow-700">
-        Use the temporary password provided when the user was created.
-      </p>
-    </div>
-  </div>
-</div>
-
-
+  );
+};
 
 export default LoginForm;
