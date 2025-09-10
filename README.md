@@ -114,8 +114,6 @@ The system comes with pre-configured demo accounts:
 | Role | Username | Password | Description |
 |------|----------|----------|-------------|
 | Admin | admin | admin123 | System administrator with full access |
-| Teacher | prof.smith | teacher123 | Sample teacher account |
-| Student | john.doe | student123 | Sample student (Semester 3, Year 2024) |
 
 ## 🎨 Design System
 
@@ -256,10 +254,4 @@ For support and questions:
 
 ---
 
-**Built with ❤️ for educational institutions worldwide**#   n e w 
- 
- #   S t u d y Q 
- 
- #   S t u d y Q 
- 
- 
+**Built with ❤️ for educational institutions worldwide**#
